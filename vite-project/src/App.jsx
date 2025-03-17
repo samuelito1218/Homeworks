@@ -1,0 +1,22 @@
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import PlayList from "./PlayList";
+import DoublyLinkedListPagina from "./DoublyLinkedListPagina";
+import Home from "./Home";
+import Despedirse from "./Despedida";
+import "./Styles.css";
+
+function App() {
+  return (
+    <Router> {/* Envolviendo todo en BrowserRouter */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/playlist" element={<PlayList />} />
+        <Route path="/goodbye" element={<Despedirse />} />
+        <Route path="/browser-navigation" element={<DoublyLinkedListPagina />} />
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;
