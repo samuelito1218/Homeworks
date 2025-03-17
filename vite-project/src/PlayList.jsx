@@ -5,7 +5,7 @@ import "./Styles.css";
 
 const Playlist = () => {
     const lista = useRef(new LinkedList());
-    const cancionesAgregadas = useRef(false); // 🔹 Para evitar dobles inserciones
+    const cancionesAgregadas = useRef(false); 
 
     useEffect(() => {
         if (!cancionesAgregadas.current) {
@@ -18,7 +18,7 @@ const Playlist = () => {
             lista.current.agregarUnElementoLista("Demons - Imagine Dragons");
             lista.current.agregarUnElementoLista("Radioactive - Imagine Dragons");
 
-            cancionesAgregadas.current = true; // 🔹 Solo se ejecuta una vez
+            cancionesAgregadas.current = true; 
             setCancionActual(lista.current.obtenerCancionActual());
             setHaySiguienteCancion(lista.current.obtenerSiguienteCancion() !== null);
         }
