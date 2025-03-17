@@ -8,7 +8,7 @@ import "./Styles.css";
 
 function App() {
   return (
-    <Router> {/* Envolviendo todo en BrowserRouter */}
+    <Router> {}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/playlist" element={<PlayList />} />
