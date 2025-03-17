@@ -18,7 +18,7 @@ class LinkedList {
             this.tail.next = newNode;
             this.tail = newNode;
         }
-        this.tail.next = null; // 🔹 IMPORTANTE: El último nodo no apunta a nadie
+        this.tail.next = null; 
         this.length++;
         
     }
@@ -36,7 +36,7 @@ class LinkedList {
         if (this.current && this.current.next) {
             this.current = this.current.next;
         } else {
-            this.current = null; // 🔹 Se detiene en el último nodo
+            this.current = null; 
         }
 
     }
