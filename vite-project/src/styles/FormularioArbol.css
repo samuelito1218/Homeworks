@@ -1,0 +1,80 @@
+.formulario-arbol {
+  background: #2563eb;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.formulario-arbol h2 {
+  color: white;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.seccion-insertar,
+.seccion-buscar {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.seccion-insertar h3,
+.seccion-buscar h3 {
+  color: white;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.input-numero {
+  flex: 1;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  background: white;
+  color: #081331;
+}
+
+.input-numero:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.5);
+}
+
+.btn-insertar,
+.btn-buscar,
+.btn-ejemplos {
+  background: #60a5fa;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-insertar:hover,
+.btn-buscar:hover,
+.btn-ejemplos:hover {
+  background: #10a0a0;
+  transform: translateY(-2px);
+}
+
+.btn-ejemplos {
+  width: 100%;
+  margin: 10px 0;
+}
