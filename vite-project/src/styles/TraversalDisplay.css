@@ -171,7 +171,6 @@
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* Animaciones */
 @keyframes slideInNumber {
   from {
     opacity: 0;
@@ -189,7 +188,6 @@
   100% { transform: scale(1); }
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .traversal-header {
     flex-direction: column;
