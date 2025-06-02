@@ -2,7 +2,7 @@ body, #root {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #1e40af; /* un azul menos intenso que #2563eb */
+  background: #1e40af; 
   color: white;
   min-height: 100vh;
 }
