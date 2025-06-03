@@ -1,0 +1,46 @@
+// ========================================
+// FUNCIONES SASS
+// ========================================
+
+// Función para convertir px a rem
+@function rem($pixels) {
+  @return ($pixels / 16px) * 1rem;
+}
+
+// Función para convertir px a em
+@function em($pixels, $context: 16px) {
+  @return ($pixels / $context) * 1em;
+}
+
+// Función para crear colores con transparencia
+@function alpha($color, $opacity) {
+  @return rgba($color, $opacity);
+}
+
+// Función para calcular spacing escalado
+@function spacing($multiplier) {
+  @return 1rem * $multiplier;
+}
+
+// Función para obtener color más claro
+@function lighten-color($color, $percentage) {
+  @return lighten($color, $percentage);
+}
+
+// Función para obtener color más oscuro
+@function darken-color($color, $percentage) {
+  @return darken($color, $percentage);
+}
+
+// Función para z-index organizado
+@function z($layer) {
+  $z-indexes: (
+    'modal': 1000,
+    'dropdown': 100,
+    'header': 50,
+    'overlay': 10,
+    'default': 1
+  );
+  
+  @return map-get($z-indexes, $layer);
+}

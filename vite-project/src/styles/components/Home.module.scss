@@ -1,0 +1,51 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.container {
+  @include flex-center;
+  @include flex-column;
+  min-height: 100vh;
+  padding: $spacing-lg;
+  text-align: center;
+  gap: $spacing-xl;
+}
+
+.welcomeCard {
+  @include card-style($spacing-xl);
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  
+  @include respond-to(md) {
+    padding: $spacing-2xl;
+  }
+}
+
+.title {
+  color: white;
+  font-size: $font-size-3xl;
+  font-weight: $font-weight-bold;
+  margin-bottom: $spacing-md;
+  
+  @include respond-to(md) {
+    font-size: 4rem;
+  }
+}
+
+.subtitle {
+  color: white;
+  font-size: $font-size-xl;
+  font-weight: $font-weight-light;
+  opacity: 0.9;
+  margin-bottom: $spacing-lg;
+  
+  @include respond-to(md) {
+    font-size: $font-size-2xl;
+  }
+}
+
+.musicIcon {
+  display: inline-block;
+  margin-right: $spacing-xs;
+  font-size: 1.2em;
+}

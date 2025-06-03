@@ -1,0 +1,117 @@
+@import 'variables';
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == sm {
+    @media (min-width: $breakpoint-sm) { @content; }
+  }
+  @if $breakpoint == md {
+    @media (min-width: $breakpoint-md) { @content; }
+  }
+  @if $breakpoint == lg {
+    @media (min-width: $breakpoint-lg) { @content; }
+  }
+  @if $breakpoint == xl {
+    @media (min-width: $breakpoint-xl) { @content; }
+  }
+}
+
+@mixin card-style($padding: $spacing-lg) {
+  background: $card-gradient;
+  backdrop-filter: blur(15px);
+  border: 1px solid $white-20;
+  border-radius: $border-radius-lg;
+  padding: $padding;
+  box-shadow: $shadow-lg;
+}
+
+@mixin text-gradient($gradient: $text-gradient) {
+  background: $gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@mixin text-shadow($color: rgba(0, 0, 0, 0.3)) {
+  text-shadow: 0 2px 4px $color;
+}
+
+@mixin slide-in-left($duration: 0.5s, $delay: 0s) {
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideInLeft $duration ease-out $delay forwards;
+}
+
+@mixin fade-in-up($duration: 0.6s, $delay: 0s) {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp $duration ease-out $delay forwards;
+}
+
+@mixin bounce-in($duration: 0.8s, $delay: 0s) {
+  opacity: 0;
+  transform: scale(0.3);
+  animation: bounceIn $duration ease-out $delay forwards;
+}
+
+@mixin glassmorphism($blur: 15px, $opacity: 0.1) {
+  background: rgba(255, 255, 255, $opacity);
+  backdrop-filter: blur($blur);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+@mixin button-style($bg: $button-gradient, $color: white, $size: normal) {
+  background: $bg;
+  color: $color;
+  border: none;
+  border-radius: $border-radius;
+  font-weight: $font-weight-semibold;
+  cursor: pointer;
+  transition: all $transition-normal;
+  box-shadow: $shadow-sm;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-xs;
+  
+  @if $size == small {
+    padding: $spacing-xs $spacing-sm;
+    font-size: $font-size-sm;
+  } @else if $size == large {
+    padding: $spacing-md $spacing-lg;
+    font-size: $font-size-lg;
+  } @else {
+    padding: $spacing-sm $spacing-md;
+    font-size: $font-size-base;
+  }
+  
+  &:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: $shadow-md;
+    filter: brightness(1.1);
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+  
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    background: $white-20;
+    color: $white-90;
+  }
+}

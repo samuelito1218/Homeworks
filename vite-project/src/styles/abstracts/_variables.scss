@@ -1,0 +1,87 @@
+// ========================================
+// COLORES
+// ========================================
+$primary-color: #667eea;
+$secondary-color: #764ba2;
+$accent-color: #f093fb;
+$success-color: #4ecdc4;
+$warning-color: #ffd93d;
+$danger-color: #ff6b6b;
+$dark-color: #2c3e50;
+$light-color: #ecf0f1;
+
+// Colores con transparencia
+$white-10: rgba(255, 255, 255, 0.1);
+$white-20: rgba(255, 255, 255, 0.2);
+$white-90: rgba(255, 255, 255, 0.9);
+$black-10: rgba(0, 0, 0, 0.1);
+$black-20: rgba(0, 0, 0, 0.2);
+
+// ========================================
+// GRADIENTES
+// ========================================
+$background-gradient: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+$card-gradient: linear-gradient(135deg, $white-10 0%, rgba(255,255,255,0.05) 100%);
+$button-gradient: linear-gradient(135deg, $accent-color 0%, $primary-color 100%);
+$text-gradient: linear-gradient(135deg, $accent-color 0%, white 100%);
+
+// ========================================
+// ESPACIADO
+// ========================================
+$spacing-xs: 0.5rem;
+$spacing-sm: 1rem;
+$spacing-md: 1.5rem;
+$spacing-lg: 2rem;
+$spacing-xl: 3rem;
+$spacing-2xl: 4rem;
+
+// ========================================
+// TIPOGRAFÍA
+// ========================================
+$font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+$font-secondary: 'Poppins', sans-serif;
+
+$font-size-xs: 0.75rem;
+$font-size-sm: 0.875rem;
+$font-size-base: 1rem;
+$font-size-lg: 1.125rem;
+$font-size-xl: 1.25rem;
+$font-size-2xl: 1.5rem;
+$font-size-3xl: 2rem;
+$font-size-4xl: 2.5rem;
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// ========================================
+// BORDES Y SOMBRAS
+// ========================================
+$border-radius-sm: 8px;
+$border-radius: 12px;
+$border-radius-lg: 20px;
+$border-radius-xl: 24px;
+
+$shadow-sm: 0 2px 4px $black-10;
+$shadow-md: 0 4px 12px rgba(0,0,0,0.15);
+$shadow-lg: 0 8px 25px rgba(0,0,0,0.2);
+$shadow-xl: 0 12px 40px rgba(0,0,0,0.25);
+
+// ========================================
+// BREAKPOINTS
+// ========================================
+$breakpoint-xs: 480px;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-2xl: 1400px;
+
+// ========================================
+// TRANSICIONES
+// ========================================
+$transition-fast: 0.2s ease;
+$transition-normal: 0.3s ease;
+$transition-slow: 0.5s ease;

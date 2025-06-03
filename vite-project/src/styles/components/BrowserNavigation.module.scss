@@ -1,0 +1,84 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.historial {
+  @include card-style;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.title {
+  color: white;
+  font-size: $font-size-2xl;
+  font-weight: $font-weight-bold;
+  margin-bottom: $spacing-lg;
+  text-align: center;
+  
+  @include respond-to(md) {
+    font-size: $font-size-3xl;
+  }
+}
+
+.navigationInfo {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-md;
+  margin-bottom: $spacing-xl;
+  
+  @include respond-to(sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @include respond-to(lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.infoItem {
+  background: rgba(255, 255, 255, 0.1);
+  padding: $spacing-md;
+  border-radius: $border-radius;
+  border-left: 3px solid $success-color;
+}
+
+.label {
+  display: block;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-semibold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: $spacing-xs;
+  color: $success-color;
+}
+
+.value {
+  color: white;
+  font-size: $font-size-base;
+  font-weight: $font-weight-medium;
+}
+
+.navigationButtons {
+  display: flex;
+  gap: $spacing-md;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  @include button-style();
+  display: flex;
+  align-items: center;
+  gap: $spacing-xs;
+  min-width: 140px;
+  justify-content: center;
+  font-size: $font-size-base;
+}
+
+.backBtn {
+  background: $warning-color;
+}
+
+.forwardBtn {
+  background: $success-color;
+}

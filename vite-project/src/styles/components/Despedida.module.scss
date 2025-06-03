@@ -1,0 +1,56 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.container {
+  @include flex-center;
+  @include flex-column;
+  min-height: 100vh;
+  padding: $spacing-lg;
+  text-align: center;
+  gap: $spacing-xl;
+}
+
+.farewellCard {
+  @include card-style($spacing-xl);
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  
+  @include respond-to(md) {
+    padding: $spacing-2xl;
+  }
+}
+
+.title {
+  color: white;
+  font-size: $font-size-3xl;
+  font-weight: $font-weight-bold;
+  margin-bottom: $spacing-lg;
+  
+  @include respond-to(md) {
+    font-size: 4rem;
+  }
+}
+
+.message {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-light;
+  line-height: 1.8;
+  margin-bottom: $spacing-lg;
+  opacity: 0.95;
+  color: white;
+}
+
+.heart {
+  display: inline-block;
+  color: $danger-color;
+  margin: 0 $spacing-xs;
+  font-size: 1.2em;
+}
+
+.subtitle {
+  font-size: $font-size-base;
+  opacity: 0.8;
+  font-style: italic;
+  color: white;
+}
